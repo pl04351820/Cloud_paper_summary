@@ -9,3 +9,8 @@
 - Global variable 
 - Message queue
 - CEvent (Event method)
+
+#### Coroutine
+- Thread accesses resource when there is free resources.
+- Coroutine accesses resouce avoiding meanningless work. Avoid context switch. But this actually lose the ability for multi-thread. (Yeld)
+- Implementation is create space on Heap. Then thread synchronization them.

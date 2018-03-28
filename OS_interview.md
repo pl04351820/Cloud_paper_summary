@@ -3,13 +3,6 @@
 - signal(Semaphore): Many objects can access resource but within a limit.
 - event: send a update request when finishing. 
 
-#### Communication between threads
-- Pipe. Only works for half dual mode. The relationship usually parent and child or assembler.
-- Message Queue. RabbitMQ, ZeroMQ
-- Signal. Singal_kill  
-- Shared Memory. Very fast --> Ctrl + C and Ctrl + V
-- Socket Networking
-
 #### Deadlock situation
 - mutext 
 - unpreempt 
@@ -35,3 +28,17 @@
 - FIFO
 
 ##### Critical Section -> A area where resource are shared. 
+
+#### I/O multiplex
+- Select
+- epoll (Linux)
+- kqueue (BSD/ Mac OS X)
+
+#### RAID 
+- RAID 0: No replication. Only improve performance
+- RAID 1: replication 
+- RAID 2: Use hamming code
+- RAID 3: Parity code
+- RAID 4: Use chuck instead of block
+- RAID 5: Allocate parity codes into different disks.
+- RAID 6: Add more parity bit.
