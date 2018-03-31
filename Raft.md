@@ -6,7 +6,7 @@ More easy to understand and implement protocols.
 
 ### Key insights
 - Leader elect, three states of server.
-    ![Docker](/images/redis.jpg)
+    ![Docker](/images/SM.jpg)
     - learder.
     - Candidate.
     - Follower.
