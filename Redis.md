@@ -68,3 +68,33 @@ Time event: Run specific event in specific timestamp.
 
 ### Concurrency Control 
 The redis concurrency control is based on single thread strategy to avoid concurrency.
+
+
+## Multiple redis
+### Replication 
+Guarantee Fault-tolerance
+- Old Version
+Use SLAVEOF commandline to sync (Slave/Master model). Very weak consistency model in distributed-redis.
+The route: slave will send a sync signal to master. And master will generate a RDB file, than send this RDB to slave.
+- New Version
+PSYNC replace SYNC. Full resynchronization when first sync. Partial resynchrnonization for later replication. Still weak consistency model. Still no PAXOS model (Eventual consistency mdoel)  --> Partial synchrnization is implementated by replication offset stategy.
+
+### Sentinel
+Guarantee Availability
+- When server crash, the slave will replace the location of server. Sentinel is used to sync this model (Very same as GFS)
+- Election strategy for multiple sentinel as leader (GFS master) -> PAXOS algo
+
+### Cluster
+Add load balance and other strategies.
+Implement by sharding instead of consistent hashing.
+No guarantee for strong consistency.
+
+### Transaction 
+Implement by using MULTI, EXEC and WATCH. Every redis client owns its transaction status.
+- MULTI implies there is a trasaction starts.
+- WATCH uses OCC strategy to see if a value is changed.
+- ACID in redis 
+    - No rollback in redis. (A)
+    - Guarantee consistency (C)
+    - Single thread guarantee isolation (I)
+    - No durable in redis due to memory based (D)
