@@ -8,22 +8,26 @@
 - CAS
 ### MVCC
 - OCC
+- Occeanbase
 ### Cow
 - Fock()
+### Read-only / Immutable / Append-only (Assume write is much smaller than write)
+- GFS/HDFS
+- Occeanbase (SSD + memory)
+### Log system
+- Corfu
+### True timestamp
+- Google Spanner 
 ### PAXOS
 - log replication 
-### Raft / ZAB
+- Occeanbase (multi-paxos, strong consistency)
+### Raft / ZAB (simple multi-paxos)
 - etcd 
 - zookeeper
 ### Eventual consistency
 - Gossip
 - Redis
 - GFS
-### Read-only / Immutable / Append-only (Assume write is much smaller than write)
-- GFS/HDFS
-### Log system
-- Corfu
-
 
 ### OS
 #### lock
