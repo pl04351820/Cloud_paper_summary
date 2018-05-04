@@ -10,7 +10,7 @@ More easy to understand and implement protocols.
     - learder.
     - Candidate.
     - Follower.
-- log replication, Guarantee the strong consistency by unify log informaiton.
+- log replication, Guarantee the strong consistency by unify log informaiton. To guarantee fault-tolerance. The leader first ask to write log and then commit it to avoid crashing. After writing log, it will commit it. 
 - Security.
 - Member change.
 

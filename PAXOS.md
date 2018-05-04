@@ -19,4 +19,7 @@ Solution for Simple -> only proposer in system. Call it leader.
 
 ![multi_paxos](/images/multi_paxos.png)
 1. First round RPC (Leader elect)
-2. The following RPC is only one-round. 
+2. The following RPC is only one-round untill it crash. 
+
+![simple_multi_paxos](/images/multi_paxos_industry.png)
+Reduce the roles. Combine proposer, acceptor, and learner.

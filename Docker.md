@@ -32,3 +32,6 @@
 
 ### Disadvantage
 - Waste CPU resource. The vritualization is a process for wasting CPU resource. 
+
+### Fs
+- Docker is built on Aufs. Mount Strategy.

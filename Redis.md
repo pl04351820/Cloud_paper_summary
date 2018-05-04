@@ -41,7 +41,7 @@ Keyword: ENCODING to check the encode type of redis.
 - List
     - Ziplist or linkedlist
         Transfer from ziplist to linkedlist if a string is very big or number of elements is big.
-- Hahs
+- Hash
     - ziplist / hashtable
 - Set 
     - Intset / hashtable
